@@ -1,4 +1,4 @@
-module goutils
+module github.com/pocker-lab/goutils
 
 go 1.20
 
