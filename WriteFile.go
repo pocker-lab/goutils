@@ -6,9 +6,9 @@ import (
 	"time"
 )
 
-// WriteFile str: 文件内容；打开或创建一个文件，指定写入模式为追加（os.O_APPEND）和创建（os.O_CREATE），权限为 0666
-func WriteFile(str, sname string) {
-	name := fmt.Sprintf("%v.%v", time.Now().Format("2006-01-02-15-04-05"), sname)
+// WriteFile str: 文件内容；将内容写入到当前时间为名的txt文件中
+func WriteFile(str string) {
+	name := fmt.Sprintf("%v.txt", time.Now().Format("2006-01-02-15-04-05"))
 	file, err := os.OpenFile(name, os.O_APPEND|os.O_CREATE, 0666)
 	if err != nil {
 		fmt.Println(err) // 如果出错，打印错误并退出程序
