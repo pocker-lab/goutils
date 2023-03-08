@@ -6,8 +6,8 @@ import (
 	"time"
 )
 
-// WriteFile str: 文件内容；将内容写入到当前时间为名的txt文件中
-func WriteFile(str string) {
+// WriteFile2 str: 文件内容；将内容写入到当前时间为名的txt文件中
+func WriteFile2(str string) {
 	name := fmt.Sprintf("%v.txt", time.Now().Format("2006-01-02-15-04-05"))
 	file, err := os.OpenFile(name, os.O_APPEND|os.O_CREATE, 0666)
 	if err != nil {
